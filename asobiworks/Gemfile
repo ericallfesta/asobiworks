@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+source "https://rails-assets.org"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -24,11 +24,18 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'rails-assets-angular'
+gem 'rails-assets-angular-resource'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
-
+gem 'unicorn'
+gem 'sorcery'
+gem 'kaminari'
+gem 'rails_config'
+gem 'carrierwave'
+gem 'rmagick', require: 'RMagick'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -41,5 +48,12 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'rspec-rails','~> 3.1.0'
+  gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'capybara', '~> 2.4.3'
+  gem 'selenium-webdriver'
+  gem 'turnip'
+
 end
 
