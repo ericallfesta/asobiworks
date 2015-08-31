@@ -1,0 +1,52 @@
+<%= form_for(@cliant) do |f| %>
+  <% if @cliant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cliant.errors.count, "error") %> prohibited this cliant from being saved:</h2>
+
+      <ul>
+      <% @cliant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="container">
+  <div class="page-header">
+    <h2><span>情報登録</span></h2>
+    <p>下記のフォームに必要事項をご入力の上、【登録】ボタンをクリックしてください。</p>
+  </div>
+<div class="wrapper">
+  <form class="form-horizontal">
+  <div class="form-group">
+
+    <label class="control-label col-sm-2" for="title">タイトル</label>
+    <div class="col-sm-10">
+    <%= f.text_field :title ,:class "form-control input-sm",:placeholder => "プロジェクトのタイトルをご記入ください"%>
+
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="area">場所</label>
+    <%= f.text_field :area %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :smallnumber %><br>
+    <%= f.text_field :smallnumber %>
+  </div>
+  <div class="field">
+    <%= f.label :concept %><br>
+    <%= f.text_field :concept %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

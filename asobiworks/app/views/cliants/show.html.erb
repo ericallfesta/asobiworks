@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @cliant.title %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @cliant.area %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cliant.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @cliant.email %>
+</p>
+
+<p>
+  <strong>Smallnumber:</strong>
+  <%= @cliant.smallnumber %>
+</p>
+
+<p>
+  <strong>Concept:</strong>
+  <%= @cliant.concept %>
+</p>
+
+<%= link_to 'Edit', edit_cliant_path(@cliant) %> |
+<%= link_to 'Back', cliants_path %>

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :cliants
+
   root 'users#index'
   resources :users
 
